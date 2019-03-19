@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+<title>Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" href="./Fotografia%20y%20videos/DEFINI.jpg">
+<link rel="stylesheet" href="inicio_port.css">
+</head>
+<body>
+
+
+<div class="main">
+
+<h1>Pedro De La Nava Izquierdo</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="window.location.href = 'portfolio_inicio.html';"> Inicio</button>
+  <button class="btn" onclick="window.location.href = 'port_diseño.html';"> Diseño</button>
+  <button class="btn" onclick="window.location.href = 'port_fotografia.html';"> Fotografia</button>
+  <button class="btn" onclick="window.location.href = 'port_demoreel.html';"> Demo Reel</button>
+</div>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <a href="port_diseño.html"><img alt="diseño" src="./Fotografia%20y%20videos/logo_imagen.png" style="width:100%"></a>
+  <div class="text">Diseño</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <a href="port_fotografia.html"><img alt="fotografia" src="./Fotografia%20y%20videos/Marta.jpg" style="width:100%"></a>
+  <div class="text">Fotografia</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <a href="port_demoreel.html"><img alt="demo reel" src="./Fotografia%20y%20videos/diseño.PNG" style="width:100%"></a>
+  <div class="text">Demo Reel</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<footer>
+    <span>
+             <img  src="./Fotografia%20y%20videos/mail.png" alt="geo" height="30" width="30">
+                pedro.nava@live.u-tad.com
+            </span> 
+            &nbsp;
+            &nbsp;
+             <span>
+             <img src="./Fotografia%20y%20videos/instagram.png" alt="call" height="30" width="30">
+              pedro98.png
+            </span>
+</footer>    
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+</body>
+</html>
